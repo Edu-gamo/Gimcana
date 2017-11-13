@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Gimcana</string>
+    <string name="title_activity_about">About</string>
+    <string name="butAP">GESTIONAR PISTES</string>
+    <string name="butVP">MOSTRAR PISTA</string>
+    <string name="butAbout">ABOUT</string>
+    <string name="butExit">SORTIR</string>
+    <string name="apIden">Identificador</string>
+    <string name="apTpImage">Imatge</string>
+    <string name="apTpText">Text</string>
+    <string name="apTpSo">So</string>
+    <string-array name="apTipusPista">
+        <item>@string/apTpImage</item>
+        <item>@string/apTpText</item>
+        <item>@string/apTpSo</item>
+    </string-array>
+    <string name="apDesc">Descripció</string>
+    <string name="apLat">Latitud</string>
+    <string name="apLon">Longitud</string>
+    <string name="apNextId">Id següent pista</string>
+    <string name="apButCancel">CANCEL·LAR</string>
+    <string name="apButAccept">ACCEPTAR</string>
+    <string name="aboutText">Aplicació creada per Edu</string>
+    <string name="aboutExit">Sortir</string>
+    <string name="title_activity_show_hints">ShowHints</string>
+</resources>

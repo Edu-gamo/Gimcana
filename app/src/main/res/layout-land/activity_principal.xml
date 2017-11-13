@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top|center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/butAP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/butAP" />
+
+    <Button
+        android:id="@+id/butVP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/butVP" />
+
+    <Button
+        android:id="@+id/butAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showAbout"
+        android:text="@string/butAbout" />
+
+    <Button
+        android:id="@+id/butExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/butExit" />
+</LinearLayout>
