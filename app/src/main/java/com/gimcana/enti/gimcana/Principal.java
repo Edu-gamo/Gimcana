@@ -15,8 +15,8 @@ public class Principal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_principal);
-        setContentView(R.layout.afegir_pista);
+        setContentView(R.layout.activity_principal);
+        //setContentView(R.layout.afegir_pista);
     }
 
     public void showAbout(View view){
@@ -72,6 +72,10 @@ public class Principal extends AppCompatActivity {
         if(idNext.getText().toString().isEmpty()){
             if(!error.equals("")) error += "\n";
             error += "Falta l'identificador de la següent pista";
+        }
+        if(iden.getText().toString().equals(idNext.getText().toString())){
+            if(!error.equals("")) error += "\n";
+            error += "L'identificador no pot ser el mateix que l'identificador de la següent pista";
         }
         if(error.equals("")){
             if(afegirPista(Integer.parseInt(iden.getText().toString()), spin.getSelectedItem().toString(), desc.getText().toString(),
