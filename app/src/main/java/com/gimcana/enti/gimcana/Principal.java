@@ -17,11 +17,29 @@ public class Principal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
         //setContentView(R.layout.afegir_pista);
+
+
+        Pista p = new PistaText(10, 123.5f, 321.5f, 20, "Pista 1");
+        LlistaPistes.getInstance().addPista(p);
+        /*p = new PistaText(20, 456.5f, 654.5f, 30, "Pista 2");
+        LlistaPistes.addPista(p);
+        p = new PistaText(30, 789.5f, 987.5f, 40, "Pista 3");
+        LlistaPistes.addPista(p);*/
+
     }
 
     public void showAbout(View view){
         Intent i = new Intent(this, About.class);
         startActivity(i);
+    }
+
+    public void showHints(View view){
+        Intent i = new Intent(this, ShowHints.class);
+        startActivity(i);
+    }
+
+    public void exitApp(View view){
+        finish();
     }
 
     public boolean afegirPista(int id, String tipus, String descripcio, float latitud, float longitud, int nextId){
@@ -33,11 +51,7 @@ public class Principal extends AppCompatActivity {
         }else if(tipus.equals(getString(R.string.apTpSo))){
             novaPista = new PistaSo(id, latitud, longitud, nextId, descripcio);
         }
-        if(!comprobarPista(LlistaPistes.getInstance().llistaPistes, novaPista)){
-            LlistaPistes.getInstance().llistaPistes.add(novaPista);
-            return true;
-        }
-        return false;
+        return LlistaPistes.getInstance().addPista(novaPista);
     }
 
     public void mostrarNovaPista(View view){
@@ -87,16 +101,6 @@ public class Principal extends AppCompatActivity {
         }else{
             Toast.makeText(this, error, Toast.LENGTH_SHORT).show();
         }
-    }
-
-    private boolean comprobarPista(ArrayList<Pista> llista, Pista pista){
-        boolean find = false;
-        int i = 0;
-        while (i < llista.size()){
-            if(pista.equals(llista.get(i))) find = true;
-            i++;
-        }
-        return find;
     }
 
 }

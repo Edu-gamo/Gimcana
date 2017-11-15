@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class ShowHints extends AppCompatActivity implements View.OnClickListener {
 
-    private ArrayList<String> llistaVersions;
+    private ArrayList<Pista> llistaItems;
     private RecyclerView recyclerView;
     public Adaptador adaptador;
     private RecyclerView.LayoutManager layoutManager;
@@ -24,8 +24,10 @@ public class ShowHints extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_hints);
 
+        llistaItems = LlistaPistes.getPistes();
+
         recyclerView = (RecyclerView)findViewById(R.id.recycler_view);
-        adaptador = new Adaptador(this, llistaVersions);
+        adaptador = new Adaptador(this, llistaItems);
         adaptador.setOnClickListener(this);
         recyclerView.setAdapter(adaptador);
         layoutManager = new LinearLayoutManager(this);
@@ -45,7 +47,7 @@ public class ShowHints extends AppCompatActivity implements View.OnClickListener
     }
 
     public void onClick(View v){
-        String s = llistaVersions.get(recyclerView.getChildAdapterPosition(v));
+        String s =  String.valueOf(llistaItems.get(recyclerView.getChildAdapterPosition(v)).getId());
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }
 

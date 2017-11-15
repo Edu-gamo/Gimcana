@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
 
-    protected ArrayList<String> llistaVersions;    //Versions a mostrar
+    protected ArrayList<Pista> llistaItems;        //Items a mostrar
 
     protected LayoutInflater inflador;             //Crea Layouts a partir de l'XML list_item
 
@@ -24,14 +24,13 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
     protected View.OnClickListener onClickListener;
 
 
-
-    public Adaptador(Context contexto, ArrayList<String> llistaVersions) {
+    public Adaptador(Context contexto, ArrayList<Pista> llistaItems) {
 
         this.contexto = contexto;
 
-//TO DO: assignar la llista de versions a la propietat
-
+//TO DO: assignar la llista de items a la propietat
         //ens guardem una referència a la llista d'strings
+        this.llistaItems = llistaItems;
 
 //END TO DO
 
@@ -43,10 +42,6 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
 
     }
 
-
-
-
-
     //Creem el ViewHolder, amb els elements que cal mostrar
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -57,7 +52,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
 
         // (en aquest cas només un TextView per a guardar el nom de la versió
 
-        public TextView nomVersio;
+        public TextView textItem;
 
 
 
@@ -65,9 +60,9 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
 
             super(itemView);
 
-            //TO DO: assignar a la propietat nomVersió el TextView que s'ha especificat al layout amb el seu ID
+            //TO DO: assignar a la propietat textItem el TextView que s'ha especificat al layout amb el seu ID
 
-
+            textItem = itemView.findViewById(R.id.nomListItem);
 
             //END TO DO
 
@@ -76,10 +71,6 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
         }
 
     }
-
-
-
-
 
     //Mètode obligatori que genera un ViewHolder a partir de l'id de l'XML list_item
 
@@ -93,27 +84,23 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
 
     }
 
-
-
     // Mètode obligatori que ens permet especificar què posar als views de cada item
 
     @Override
 
     public void onBindViewHolder(ViewHolder holder, int posicio) {
 
-        holder.nomVersio.setText(llistaVersions.get(posicio));
+        holder.textItem.setText(llistaItems.get(posicio).getId());
 
     }
-
-
 
     //Mètode obligatori que retorna el número d'elements total de la llista
 
     @Override public int getItemCount() {
 
-//TO DO: retornar el número d'elements de llistaVersions
+//TO DO: retornar el número d'elements de llistaItems
 
-
+    return llistaItems.size();
 
 //END TO DO
 

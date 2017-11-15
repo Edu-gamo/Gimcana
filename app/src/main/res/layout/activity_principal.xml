@@ -18,6 +18,7 @@
             android:id="@+id/butAP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="showHints"
             android:text="@string/butAP" />
 
         <Button
@@ -37,6 +38,7 @@
             android:id="@+id/butExit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="exitApp"
             android:text="@string/butExit" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

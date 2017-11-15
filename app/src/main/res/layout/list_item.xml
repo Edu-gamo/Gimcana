@@ -13,17 +13,16 @@
         app:srcCompat="@mipmap/android_icon" />
 
     <TextView
-        android:id="@+id/nomversio"
+        android:id="@+id/nomListItem"
         android:layout_width="match_parent"
         android:layout_height="@android:dimen/app_icon_size"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_toRightOf="@id/androidIcon"
         android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_toRightOf="@id/androidIcon"
         android:gravity="center_vertical"
         android:maxLines="1"
         android:text="TextView"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        />
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
