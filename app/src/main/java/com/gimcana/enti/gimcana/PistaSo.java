@@ -12,11 +12,11 @@ public class PistaSo extends Pista {
         this.path = path;
     }
 
-    public String getPath() {
+    public String getText() {
         return path;
     }
 
-    public void setPath(String path) {
+    public void setText(String path) {
         this.path = path;
     }
 }

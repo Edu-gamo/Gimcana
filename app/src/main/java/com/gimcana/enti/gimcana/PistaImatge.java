@@ -12,9 +12,9 @@ public class PistaImatge extends Pista {
         this.path = path;
     }
 
-    public String getPath() { return path; }
+    public String getText() { return path; }
 
-    public void setPath(String path) {
+    public void setText(String path) {
         this.path = path;
     }
 }

@@ -11,8 +11,7 @@ public class LlistaPistes {
     private static ArrayList<Pista> llistaPistes;
 
     public static LlistaPistes getInstance() {
-        if (ourInstance==null)
-            ourInstance=new LlistaPistes();
+        if (ourInstance == null) ourInstance = new LlistaPistes();
         return ourInstance;
     }
 
@@ -22,18 +21,21 @@ public class LlistaPistes {
     }
 
     public static boolean addPista(Pista pista){
-
         boolean find = searchPista(pista);
         if(!find) llistaPistes.add(pista);
         return !find;
-
     }
 
     public static boolean removePista(Pista pista){
-
         boolean find = searchPista(pista);
         if(find) llistaPistes.remove(pista);
         return find;
+    }
+
+    public static boolean removePista(int position){
+        if(position < 0 || position >= llistaPistes.size()) return false;
+        llistaPistes.remove(position);
+        return true;
     }
 
     public static int size() {
@@ -41,16 +43,18 @@ public class LlistaPistes {
     }
 
     public static boolean searchPista(Pista pista){
-
         boolean find = false;
         int i = 0;
-
         while (i < llistaPistes.size()){
             if(pista.equals(llistaPistes.get(i))) find = true;
             i++;
         }
-
         return find;
+    }
+
+    public static Pista getPista(int position){
+        if(position < 0 || position >= llistaPistes.size()) return null;
+        return llistaPistes.get(position);
     }
 
 }

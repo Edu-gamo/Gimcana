@@ -45,6 +45,9 @@ public abstract class Pista {
 
     public void setNextId(int nextId) { this.nextId = nextId; }
 
+    public abstract String getText();
+    public abstract void setText(String text);
+
     @Override
     public boolean equals(Object obj) {
         if(obj == null) return false;
