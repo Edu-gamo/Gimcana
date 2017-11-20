@@ -21,4 +21,8 @@ public class About extends AppCompatActivity {
             }
         });
     }
+
+    public void exit(View view){
+        finish();
+    }
 }

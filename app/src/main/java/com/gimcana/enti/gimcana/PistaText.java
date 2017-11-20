@@ -19,4 +19,8 @@ public class PistaText extends Pista {
     public void setText(String text) {
         this.text = text;
     }
+
+    public int getIconId(){
+        return R.mipmap.text_icon;
+    }
 }

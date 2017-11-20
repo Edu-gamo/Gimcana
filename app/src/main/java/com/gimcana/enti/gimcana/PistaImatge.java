@@ -1,5 +1,7 @@
 package com.gimcana.enti.gimcana;
 
+import android.media.Image;
+
 /**
  * Created by egaona on 10/11/2017.
  */
@@ -17,4 +19,9 @@ public class PistaImatge extends Pista {
     public void setText(String path) {
         this.path = path;
     }
+
+    public int getIconId(){
+        return R.mipmap.image_icon;
+    }
+
 }

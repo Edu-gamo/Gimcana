@@ -38,9 +38,6 @@ public class ShowHints extends AppCompatActivity implements View.OnClickListener
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +56,7 @@ public class ShowHints extends AppCompatActivity implements View.OnClickListener
         final View k = v;
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle("Eliminar Pista");
-        String message = String.valueOf(LlistaPistes.getInstance().getPista(recyclerView.getChildAdapterPosition(v)).getId()) + "se va a eliminar";
+        String message = String.valueOf(LlistaPistes.getInstance().getPista(recyclerView.getChildAdapterPosition(v)).getId()) + " se va a eliminar";
         alertDialogBuilder.setMessage(message);
         alertDialogBuilder.setPositiveButton("ACEPTAR", new DialogInterface.OnClickListener() {
             @Override
@@ -80,6 +77,10 @@ public class ShowHints extends AppCompatActivity implements View.OnClickListener
     public void showForm(View view){
         Intent i = new Intent(this, Form.class);
         startActivity(i);
+    }
+
+    public void exit(View view){
+        finish();
     }
 
 }

@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:background="?attr/colorPrimary"
     android:elevation="4dp"
-    android:layout_alignParentBottom="true"
+    android:layout_alignParentBottom="false"
     android:minHeight="?attr/actionBarSize"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
@@ -19,7 +19,24 @@
         android:paddingBottom="16dp"
         android:textAlignment="center">
 
+
         <ImageButton
+            android:id="@+id/toolbarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/colorPrimary"
+            android:clickable="true"
+            android:onClick="exit"
+            android:src="@android:drawable/ic_menu_revert" />
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+
+        <!--<ImageButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="0dp"
@@ -47,7 +64,7 @@
             android:backgroundTint="@color/colorPrimary"
             android:clickable="true"
             android:scaleType="fitCenter"
-            android:src="@android:drawable/ic_menu_gallery" />
+            android:src="@android:drawable/ic_menu_gallery" />-->
 
     </LinearLayout>
 

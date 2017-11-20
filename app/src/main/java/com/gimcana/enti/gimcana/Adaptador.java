@@ -99,7 +99,8 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
         Pista pista = LlistaPistes.getInstance().getPista(posicio);
         if(pista != null){
             holder.textItem.setText(String.valueOf(pista.getId()));
-            if(pista.getClass() == PistaText.class){
+            holder.imageItem.setImageResource(pista.getIconId());
+            /*if(pista.getClass() == PistaText.class){
                 holder.imageItem.setImageResource(R.mipmap.text_icon);
             }else if(pista.getClass() == PistaImatge.class){
                 holder.imageItem.setImageResource(R.mipmap.image_icon);
@@ -107,7 +108,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
                 holder.imageItem.setImageResource(R.mipmap.sound_icon);
             }else{
                 holder.imageItem.setImageResource(R.mipmap.error_icon);
-            }
+            }*/
         }else {
             holder.textItem.setText("ERROR!");
             holder.imageItem.setImageResource(R.mipmap.error_icon);

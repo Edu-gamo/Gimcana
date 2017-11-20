@@ -21,8 +21,7 @@
             android:label="@string/title_activity_about" />
         <activity
             android:name=".ShowHints"
-            android:label="@string/title_activity_show_hints"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_show_hints" />
         <activity
             android:name=".Form"
             android:label="@string/title_activity_form"

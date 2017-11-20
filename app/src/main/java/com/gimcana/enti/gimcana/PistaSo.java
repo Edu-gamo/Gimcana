@@ -19,4 +19,8 @@ public class PistaSo extends Pista {
     public void setText(String path) {
         this.path = path;
     }
+
+    public int getIconId(){
+        return R.mipmap.sound_icon;
+    }
 }
