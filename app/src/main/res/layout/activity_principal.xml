@@ -19,6 +19,7 @@
         android:id="@+id/butVP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="showPista"
         android:text="@string/butVP" />
 
     <Button

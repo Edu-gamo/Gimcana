@@ -60,4 +60,9 @@ public abstract class Pista {
         if(p.id == this.id) return true;
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "ID: " + this.id + "\nLatitud: " + this.latitud + "\nLongitud: " + this.longitud + "\nText: " + this.getText() + "\nNext ID: " + this.nextId;
+    }
 }

@@ -41,6 +41,11 @@ public class Principal extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void showPista(View view){
+        Intent i = new Intent(this, MostrarPista.class);
+        startActivity(i);
+    }
+
     public void exit(View view){
         finish();
     }
