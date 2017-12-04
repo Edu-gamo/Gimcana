@@ -18,12 +18,12 @@
             android:layout_height="match_parent"
             android:layout_weight="1"/>
 
-        <!--<fragment
+        <fragment
             android:id="@+id/showMap"
             android:name="com.gimcana.enti.gimcana.ShowMap"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>-->
+            android:layout_weight="1"/>
 
     </LinearLayout>
 

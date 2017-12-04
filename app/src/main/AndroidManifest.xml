@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/app_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".Principal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,15 +17,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".About"
             android:label="@string/title_activity_about" />
+
         <activity
             android:name=".ShowHints"
             android:label="@string/title_activity_show_hints" />
+
         <activity
             android:name=".Form"
             android:label="@string/title_activity_form" />
+
         <activity android:name=".MostrarPista"></activity>
 
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>

@@ -20,6 +20,9 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
 
 public class MostrarPista extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks, LocationListener, OnMapReadyCallback {
 
@@ -35,7 +38,7 @@ public class MostrarPista extends AppCompatActivity implements GoogleApiClient.O
     private LocationManager manejador;
 
     /**** AQUEST ATRIBUT VISUALITZA ELS FRAGMENTS DELS TABS DE LA ACTION BAR *****/
-    MiFragmentPagerAdapter s;
+    //MiFragmentPagerAdapter s;
     private int PETICION_PERMISO_LOCALIZACION=0;
 
     @Override
@@ -91,7 +94,8 @@ public class MostrarPista extends AppCompatActivity implements GoogleApiClient.O
                         .setMessage("Necessito geolocalització")
                         .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
-                                ActivityCompat.requestPermissions(Principal.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, requestCode);
+                                //ActivityCompat.requestPermissions(Principal.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, requestCode);
+                                ActivityCompat.requestPermissions(MostrarPista.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, requestCode);
                             }
                         })
                         .show();
@@ -115,7 +119,7 @@ public class MostrarPista extends AppCompatActivity implements GoogleApiClient.O
             else
             {
                 /**** AQUEST MÈTODE ACTUALITZA LA INTERFICIE PER A MOSTRAR EN DOS TEXTVIEW LA LONGITUD I LATITUD ********/
-                s.updateUI(String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()));
+                //s.updateUI(String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()));
             }
         }
     }
@@ -135,7 +139,7 @@ public class MostrarPista extends AppCompatActivity implements GoogleApiClient.O
             else
             {
                 /**** AQUEST MÈTODE ACTUALITZA LA INTERFICIE PER A MOSTRAR EN DOS TEXTVIEW LA LONGITUD I LATITUD ********/
-                s.updateUI(String.valueOf(lastLocation.getLatitude()), String.valueOf(lastLocation.getLongitude()));
+                //s.updateUI(String.valueOf(lastLocation.getLatitude()), String.valueOf(lastLocation.getLongitude()));
             }
         }
     }
